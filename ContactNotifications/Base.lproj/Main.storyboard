@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0fC-w9-Akh">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,20 +10,110 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Contacts-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ContactNotifications" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="ContactNotifications" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AdF-X1-reG">
+                                <rect key="frame" x="0.0" y="94" width="375" height="524"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="57" id="MyO-2a-PEW" customClass="ContactCell" customModule="ContactNotifications" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="57"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MyO-2a-PEW" id="gTS-1p-z8t">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="56.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sd6-NJ-mVJ">
+                                                    <rect key="frame" x="15" y="8.5" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="ar0-MD-gcN"/>
+                                                        <constraint firstAttribute="width" constant="40" id="gjN-B7-giK"/>
+                                                    </constraints>
+                                                    <state key="normal" image="empty_selection"/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Sd6-NJ-mVJ" firstAttribute="leading" secondItem="gTS-1p-z8t" secondAttribute="leadingMargin" id="Gkf-uN-BGE"/>
+                                                <constraint firstItem="Sd6-NJ-mVJ" firstAttribute="centerY" secondItem="gTS-1p-z8t" secondAttribute="centerY" id="X8K-9r-4t5"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SLl-GW-04D">
+                                <rect key="frame" x="0.0" y="64" width="375" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="MuC-Xv-Ie4"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="SLl-GW-04D" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="LI6-Z5-YJn"/>
+                            <constraint firstItem="AdF-X1-reG" firstAttribute="top" secondItem="SLl-GW-04D" secondAttribute="bottom" id="VSa-Us-e2k"/>
+                            <constraint firstItem="AdF-X1-reG" firstAttribute="top" secondItem="SLl-GW-04D" secondAttribute="bottom" id="WF7-Is-Exi"/>
+                            <constraint firstItem="SLl-GW-04D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ayi-GZ-CFa"/>
+                            <constraint firstItem="SLl-GW-04D" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kNJ-OH-ENL"/>
+                            <constraint firstItem="AdF-X1-reG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="lvo-bM-Dx1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="AdF-X1-reG" secondAttribute="bottom" id="nAW-6c-9yM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AdF-X1-reG" secondAttribute="trailing" id="xmd-Wx-bIb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Contacts" id="VzF-z0-B9o"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="583" y="22"/>
+            <point key="canvasLocation" x="2988" y="16.641679160419791"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="3To-Nk-Ohj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qY8-tR-ypm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Fgg-IA-YZF"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="U3V-5W-a3d">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="dgp-k0-QXO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="exC-CA-ssn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2048.8000000000002" y="16.641679160419791"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="PCQ-ci-xaI">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="0fC-w9-Akh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hyu-vv-BZ1">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="qY8-tR-ypm" kind="relationship" relationship="viewControllers" id="9dk-hw-i5O"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X39-ng-aUl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1109.5999999999999" y="16.641679160419791"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="empty_selection" width="30" height="30"/>
+    </resources>
 </document>

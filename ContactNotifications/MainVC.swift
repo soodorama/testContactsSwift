@@ -18,21 +18,3 @@ class MainVC: UIViewController {
     
 }
 
-extension MainVC: CNContactFetchRequest {
-    func fetchContacts() -> CNContact {
-        var contacts = [CNContact]()
-        let keys = [CNContactFormatter.descriptorForRequiredKeys(for: .fullName)]
-        let request = CNContactFetchRequest(keysToFetch: keys)
-        
-        do {
-            try self.contactStore.enumerateContactsWithFetchRequest(request) {
-                (contact, stop) in
-                // Array containing all unified contacts from everywhere
-                contacts.append(contact)
-            }
-        }
-        catch {
-            print("unable to fetch contacts")
-        }
-    }
-}

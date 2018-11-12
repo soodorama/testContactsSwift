@@ -15,6 +15,7 @@
 		8E48373721995AFE008A6DA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E48373521995AFE008A6DA7 /* LaunchScreen.storyboard */; };
 		8E48374221995AFE008A6DA7 /* ContactNotificationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E48374121995AFE008A6DA7 /* ContactNotificationsTests.swift */; };
 		8E48374D21995AFE008A6DA7 /* ContactNotificationsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E48374C21995AFE008A6DA7 /* ContactNotificationsUITests.swift */; };
+		8E4962C4219961560006173C /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4962C3219961560006173C /* ContactCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		8E48374821995AFE008A6DA7 /* ContactNotificationsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContactNotificationsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E48374C21995AFE008A6DA7 /* ContactNotificationsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactNotificationsUITests.swift; sourceTree = "<group>"; };
 		8E48374E21995AFE008A6DA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E4962C3219961560006173C /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +101,9 @@
 		8E48372821995AFC008A6DA7 /* ContactNotifications */ = {
 			isa = PBXGroup;
 			children = (
-				8E48372B21995AFD008A6DA7 /* MainVC.swift */,
 				8E48372D21995AFD008A6DA7 /* Main.storyboard */,
+				8E4962C3219961560006173C /* ContactCell.swift */,
+				8E48372B21995AFD008A6DA7 /* MainVC.swift */,
 				8E48372921995AFC008A6DA7 /* AppDelegate.swift */,
 				8E48373321995AFE008A6DA7 /* Assets.xcassets */,
 				8E48373521995AFE008A6DA7 /* LaunchScreen.storyboard */,
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E4962C4219961560006173C /* ContactCell.swift in Sources */,
 				8E48372C21995AFD008A6DA7 /* MainVC.swift in Sources */,
 				8E48373221995AFD008A6DA7 /* ContactNotifications.xcdatamodeld in Sources */,
 				8E48372A21995AFD008A6DA7 /* AppDelegate.swift in Sources */,
