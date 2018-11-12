@@ -36,13 +36,29 @@
                                                         <constraint firstAttribute="width" constant="40" id="gjN-B7-giK"/>
                                                     </constraints>
                                                     <state key="normal" image="empty_selection"/>
+                                                    <connections>
+                                                        <action selector="selectionPressed:" destination="MyO-2a-PEW" eventType="touchUpInside" id="81d-dF-kAa"/>
+                                                    </connections>
                                                 </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First name Last name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EsH-lg-lQA">
+                                                    <rect key="frame" x="63" y="17.5" width="289" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="EsH-lg-lQA" firstAttribute="leading" secondItem="Sd6-NJ-mVJ" secondAttribute="trailing" constant="8" id="4Fz-9h-HFd"/>
+                                                <constraint firstItem="EsH-lg-lQA" firstAttribute="centerY" secondItem="gTS-1p-z8t" secondAttribute="centerY" id="7ON-l8-KWH"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="EsH-lg-lQA" secondAttribute="trailing" constant="8" id="Dzc-wz-0tH"/>
                                                 <constraint firstItem="Sd6-NJ-mVJ" firstAttribute="leading" secondItem="gTS-1p-z8t" secondAttribute="leadingMargin" id="Gkf-uN-BGE"/>
                                                 <constraint firstItem="Sd6-NJ-mVJ" firstAttribute="centerY" secondItem="gTS-1p-z8t" secondAttribute="centerY" id="X8K-9r-4t5"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="EsH-lg-lQA" id="cfV-pd-t9d"/>
+                                            <outlet property="selectionButton" destination="Sd6-NJ-mVJ" id="CNT-xQ-WRt"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
